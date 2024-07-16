@@ -8,3 +8,5 @@ for s in $(git grep 'DEV:' "$@"); do
 
   echo "sed -i '${line}s/DEV:/$path:$line:/' $path" | bash
 done
+
+go fmt "$@" 1> /dev/null
